@@ -1,0 +1,16 @@
+{
+    "name": "MovieBuff",
+    "version": "0.0.1",
+    "description": "A Social Network for Movie Buffs",
+    "devDependencies": {
+        "http-server": "^0.6.1",
+        "angular": "1.5.2",
+        "angular-route": "1.5.1",
+        "jquery": "2.2.2"
+    },
+    "scripts": {
+        "prestart": "npm install",
+        "start": "http-server -a localhost -p 8000 -c-1"
+
+    }
+}

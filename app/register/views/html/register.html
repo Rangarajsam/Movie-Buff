@@ -1,0 +1,65 @@
+<div class="register-container">
+
+    <div class="row main">
+        <div class="panel-heading">
+            <div class="panel-title text-center">
+                <h1 class="reg-heading">{{ invite }}</h1>
+                <hr />
+            </div>
+        </div>
+        <div class="main-login main-center">
+            <form class="form-horizontal" name="registerForm" ng-submit="submitRegister()">
+
+                <div class="form-group">
+                    <label for="name" class="cols-sm-2 control-label">Your Name</label>
+
+
+                    <input type="text" class="form-control  input-lg" name="name" id="name" placeholder="Enter your Name" ng-model="user.name" ng-required="true" ng-pattern="/^[a-zA-Z\s]*$/" />
+                    <span class="error" ng-show="registerForm.name.$invalid && registerForm.name.$dirty">Type a Valid Name</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email" class="cols-sm-2 control-label">Your Email</label>
+
+
+                    <input type="email" class="form-control  input-lg" name="email" id="email" placeholder="Enter your Email" ng-model="user.email" ng-required="true"/>
+                    <span class="error" ng-show="registerForm.email.$invalid && registerForm.email.$dirty">Type a Valid email</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="username" class="cols-sm-2 control-label">Username</label>
+
+
+                    <input type="text" class="form-control  input-lg" name="username" id="username" placeholder="Enter your Username" ng-model="user.userName" ng-required="true" ng-minlength="5"/>
+                    
+                    <span class="error" ng-show="registerForm.username.$invalid && registerForm.username.$dirty">Type a Valid User Name</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="password" class="cols-sm-2 control-label">Password</label>
+                    <input type="password" class="form-control  input-lg" name="password" id="password" placeholder="Enter your Password"  ng-model="user.password" ng-required="true" ng-pattern="user.confirmPassword"/>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirm" class="cols-sm-2 control-label">Confirm Password</label>
+
+
+                    <input type="password" class="form-control  input-lg" name="confirmPassword" id="confirm" placeholder="Confirm your Password"   ng-model="user.confirmPassword" ng-required="true" ng-pattern="user.password"/>
+                    <span class="error" ng-show="registerForm.password.$invalid && registerForm.password.$dirty">Retype password doesn't match with the password</span>
+                    <span class="error" ng-show="registerForm.confirmPassword.$invalid && registerForm.confirmPassword.$dirty">Retype password doesn't match with the password</span>
+                </div>
+                
+                <div class="form-group ">
+                    <button type="submit" class="btn btn-primary btn-lg btn-block login-button" ng-disabled="registerForm.$invalid && registerForm.$dirty">Register</button>
+                </div>
+                <div class="login-register">
+                    <a href="#/login">Login</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>
+
+
+<pre>{{registerForm | json}}</pre>
