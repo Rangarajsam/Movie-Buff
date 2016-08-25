@@ -3,11 +3,12 @@
        <div class="website-name">Movie Buff</div>
         <input type="email" name="email" placeholder="Email" ng-required="true" class="form-control input-lg" ng-model="user.email" />
               <span class="error" ng-show="loginForm.email.$invalid && loginForm.email.$dirty">Type a Valid email</span>
-              
+
         <input type="password" name="password" class="form-control input-lg" id="password" placeholder="Password"  ng-required="true" ng-model="user.password"/>
 
 
         <button type="submit" name="go" class="btn btn-lg btn-primary btn-block" ng-disabled="loginForm.$invalid && loginForm.$dirty">Sign in</button>
+          <span class="error" ng-show="wrongCredential">Your Email or Password is wrong</span>
         <div>
             <a href="#/register">Create account</a> or <a href="#">Reset password</a>
         </div>
