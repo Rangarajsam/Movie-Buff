@@ -1,7 +1,5 @@
-var dashboardModule = angular.module("dashboardModule", []);
-dashboardModule.controller("dashboardController", ["$scope", "dashboardService", function ($scope, dashboardService) {
-
-    $scope.dashboard = dashboardService.dashboard;
+var otherFeatures=angular.module('otherFeaturedMovies',[]);
+otherFeatures.controller('otherMoviesController',['$scope','dashboardService',function($scope,dashboardService){
     var allMoviesPromise = dashboardService.getAllMovies();
     allMoviesPromise.then(function(movies){
         $scope.latestMovies=movies[0].data.results;
@@ -9,5 +7,4 @@ dashboardModule.controller("dashboardController", ["$scope", "dashboardService",
         $scope.upcomingMovies=movies[2].data.results;
         $scope.topRatedMovies=movies[3].data.results;
     });
-
 }]);

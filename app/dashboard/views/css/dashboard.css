@@ -232,6 +232,7 @@ footer .copy{
 
 .content-box-large {
   padding: 20px;
+    position: relative;
 }
 
 .box-with-header {
@@ -330,7 +331,7 @@ footer .copy{
    border-bottom:0px;
 }
 
-.sidebar .nav li a:hover, .sidebar .nav li.current > a {
+.sidebar .nav li a:hover, .sidebar .nav li.active > a {
 	background: #fff;
 	color: #555;
    border-bottom:0px;
@@ -560,6 +561,7 @@ body {
     float: left;
     padding: 10px 15px;
     padding-top: 0px;
+    font-weight: bold;
 }
 
 .panel-heading>.panel-title>*, .content-box-header .panel-title>* {
@@ -652,4 +654,60 @@ body {
       box-shadow:0px 0px 1px #0fa6bc;
       border-radius:10px;
    }
+}
+.movie-tiles {
+    margin-bottom: 15px;
+    min-height: 278px;
+}
+.item-movie-card {
+    box-shadow: 2px 1px 5px rgba(0,0,0,0.3);
+    background: #fff;
+    padding-left: 0;
+    width: 100%;
+    position: relative;
+}
+.item-btn {
+    padding: 0 10px;
+    font: normal 12px/25px arial;
+    color: #fff;
+    background-color: #286090;
+    border-color: #204d74;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+}
+.item-btn.db {
+    border-radius: 0 0 10px 0;
+}
+.movie-image {
+   padding-left: 0; 
+    vertical-align: top;
+    overflow: hidden;
+}
+.movie-image img {
+    display: block;
+}
+.movie-card-heading {
+    font: bold 14px/30px arial;
+    color: #000;
+    height: 30px;
+    overflow: hidden;
+}
+
+.movie-rating,.movie-release-year {
+    font: normal 11px/18px arial;
+    color: #aaa;
+}
+.movie-card-heading.ov {
+    font: bold 13px/20px arial;
+    margin-top: 15px;
+    height: auto;
+}
+.movie-desc {
+    font: normal 12px/20px arial;
+    color: #000;
+    margin-bottom: 10px;
+    height: 120px;
+    overflow: hidden;
 }

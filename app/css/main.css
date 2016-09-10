@@ -75,3 +75,10 @@ table {
     font: normal 12px/18px arial;
     color: #cc0000;
 }
+.common-pages .left-menu {
+    display: none !important;
+}
+
+.common-pages .common-items {
+    width: 100% !important;
+}

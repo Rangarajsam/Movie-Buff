@@ -1,5 +1,5 @@
 var regModule = angular.module("registrationModule", []);
-regModule.controller("regController", function ($scope) {
+regModule.controller("regController", ['$scope','$location',function ($scope,$location) {
 
     $scope.invite = "Please Regiter";
     $scope.userList=[];
@@ -9,6 +9,9 @@ regModule.controller("regController", function ($scope) {
       localStorage.setItem("userList",userListForStorage);
         console.log(userListForStorage);
         console.log($scope.userList);
-    }
+    };
+    $scope.hideMenu=function(view){
+        return view === $location.path();
+    };
 
-});
+}]);

@@ -1,0 +1,31 @@
+<div class="col-md-12">
+    <div class="content-box-large">
+        <div class="panel-heading">
+            <div class="panel-title">Movies Currently Running</div>
+        </div>
+        <div class="panel-body">
+            <div class="col-lg-6 movie-tiles" ng-repeat="movie in latestMovies">
+                <div class="item-movie-card">
+                   <div class="item-btn">More</div>
+                    <div class="movie-image col-lg-5">
+                        <img ng-src="{{'https://image.tmdb.org/t/p/w185_and_h278_bestv2'+movie.poster_path}}" ng-hide="movie.poster_path===null">
+                        <img src="./images/no-image.jpg" ng-show="movie.poster_path===null">
+                    </div>
+                    <div class="movie-card-details col-lg-7">
+
+                        <div class="movie-card-heading">{{movie.original_title}}</div>
+                        <p class="movie-rating">Rating : {{movie.vote_average}}</p>
+                        <p class="movie-release-year">Released Year : {{movie.release_date}}</p>
+                        <h2 class="movie-card-heading ov">Overview</h2>
+                        <p class="movie-desc">{{movie.overview}}</p>
+
+
+                        <button class="btn btn-primary">More Info</button>
+                    </div>
+
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
