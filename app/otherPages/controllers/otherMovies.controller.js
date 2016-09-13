@@ -1,5 +1,9 @@
 var otherFeatures=angular.module('otherFeaturedMovies',[]);
-otherFeatures.controller('otherMoviesController',['$scope','dashboardService',function($scope,dashboardService){
+otherFeatures.controller('otherMoviesController',['$scope','dashboardService','$location',function($scope,dashboardService,$location){
+    
+    $scope.goToDetails=function(id){
+        $location.path("#/"+id);
+        };
     var allMoviesPromise = dashboardService.getAllMovies();
     allMoviesPromise.then(function(movies){
         $scope.latestMovies=movies[0].data.results;

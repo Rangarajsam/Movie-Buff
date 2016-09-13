@@ -1,5 +1,5 @@
 var dashboardModule = angular.module("dashboardModule", []);
-dashboardModule.controller("dashboardController", ["$scope", "dashboardService", function ($scope, dashboardService) {
+dashboardModule.controller("dashboardController", ["$scope","$location","dashboardService", function ($scope,$location, dashboardService) {
 
     $scope.dashboard = dashboardService.dashboard;
     var allMoviesPromise = dashboardService.getAllMovies();

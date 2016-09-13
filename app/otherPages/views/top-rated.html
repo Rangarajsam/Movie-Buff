@@ -6,7 +6,6 @@
         <div class="panel-body">
             <div class="col-lg-6 movie-tiles" ng-repeat="movie in topRatedMovies">
                 <div class="item-movie-card">
-                   <div class="item-btn">More</div>
                     <div class="movie-image col-lg-5">
                         <img ng-src="{{'https://image.tmdb.org/t/p/w185_and_h278_bestv2'+movie.poster_path}}" ng-hide="movie.poster_path===null">
                         <img src="./images/no-image.jpg" ng-show="movie.poster_path===null">

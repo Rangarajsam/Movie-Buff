@@ -676,6 +676,13 @@ body {
     right: 0;
     bottom: 0;
     cursor: pointer;
+    display: block;
+    text-decoration: none;
+}
+.item-btn:hover {
+    background: #189;
+    color: #fff;
+    text-decoration: none;
 }
 .item-btn.db {
     border-radius: 0 0 10px 0;
@@ -710,4 +717,43 @@ body {
     margin-bottom: 10px;
     height: 120px;
     overflow: hidden;
+}
+.total-details-top {
+    width: 100%;
+    margin-bottom: 20px;
+}
+.total-details-btm {
+    width: 100%;
+}
+.total-details-tleft {
+    float: left;
+    box-shadow: 2px 1px 5px rgba(0,0,0,0.3);
+    background: #fff;
+}
+.total-details-tleft img {
+    display: block;
+}
+.total-details-tright {
+    float: left;
+    width: calc(100% - 382px);
+    background: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-left: 20px;
+    border-radius: 10px;
+}
+.td-film-title {
+    font: bold 16px/30px arial;
+    color: #000;
+    margin-bottom: 10px;
+}
+.td-other-titles {
+    font: bold 12px/22px arial;
+    color: #000;
+    margin-top: 10px;
+}
+
+.td-desc {
+    font: normal 11px/18px arial;
+    color: #000;
 }

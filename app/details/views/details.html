@@ -1,0 +1,17 @@
+<div class="total-details-top">
+    <div class="total-details-tleft">
+         <img ng-src="{{'http://image.tmdb.org/t/p/w342'+details.poster_path}}" ng-hide="details.poster_path===null">
+                        <img src="./images/no-image.jpg" ng-show="details.poster_path===null">
+    </div>
+    <div class="total-details-tright">
+        <h1 class="td-film-title">{{details.original_title}}</h1>
+        <p class="td-other-titles"> Overview</p>
+        <p class="td-desc">{{details.overview}}</p>
+        <p class="td-other-titles"> Release Date</p>
+        <p class="td-desc">{{details.release_date}}</p>
+        
+        <p class="td-other-titles"> Production Companies</p>
+        <p class="td-desc" ng-repeat="detail in details.production_companies">{{detail.name}}</p>
+    </div>
+    <div class="clearfix"></div>
+</div>

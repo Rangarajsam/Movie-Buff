@@ -1,4 +1,4 @@
-var movieBuff=angular.module("movieBuff",['ngRoute','commonModule','registrationModule','loginModule','dashboardModule','otherFeaturedMovies']);
+var movieBuff=angular.module("movieBuff",['ngRoute','commonModule','registrationModule','loginModule','dashboardModule','otherFeaturedMovies','detailsModule']);
 
 movieBuff.config(["$routeProvider",function($routeProvider){
     $routeProvider
@@ -29,6 +29,10 @@ movieBuff.config(["$routeProvider",function($routeProvider){
     .when("/topRated",{
         templateUrl:"./otherPages/views/top-rated.html",
         controller:"otherMoviesController"
+    })
+    .when("/:movieId",{
+        templateUrl:"./details/views/details.html",
+        controller:"DetailsController"
     })
     .otherwise({
         redirectTo:"/login"
