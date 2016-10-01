@@ -1,84 +1,219 @@
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
     font: normal 12px/20px arial;
 }
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
 }
+
 body {
-	line-height: 1;
+    line-height: 1;
 }
-ol, ul {
-	list-style: none;
+
+ol,
+ul {
+    list-style: none;
 }
-blockquote, q {
-	quotes: none;
+
+blockquote,
+q {
+    quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
 }
+
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
+
 .login-container {
     width: 30%;
     margin: 50px auto 0;
 }
+
 .register-container {
     width: 40%;
     margin: 0 auto;
 }
+
 .login-container input {
     margin-bottom: 20px;
 }
+
 .website-name {
     font: bold 30px/50px arial;
     text-align: center;
     width: 100%;
     text-transform: uppercase;
 }
+
 .reg-heading {
     font: bold 30px/50px arial;
     text-align: center;
     width: 100%;
     text-transform: uppercase;
 }
+
 .new-user-txt {
     font: bold 30px/50px arial;
     text-align: center;
     width: 100%;
-    text-transform:capitalize;
+    text-transform: capitalize;
     margin-top: 50px;
 }
+
 .error {
     font: normal 12px/18px arial;
     color: #cc0000;
 }
+
 .common-pages .left-menu {
     display: none !important;
 }
 
 .common-pages .common-items {
     width: 100% !important;
+}
+
+.search-box {
+    position: relative;
+}
+
+.search-box .form-control {
+    border-radius: 4px;
+    border-top-right-radius: 4px !important;
+    border-bottom-right-radius: 4px  !important;
+}
+
+.dropdown-list {
+    position: absolute;
+    top: 34px;
+    left: 0px;
+    border-radius: 10px;
+    background: #fff;
+    z-index: 5;
+    width: 100%;
+    min-height: 26px;
+    border: 1px solid #aaa;
+    max-height: 250px;
+    overflow: auto;
+}
+
+.dropdown-list li {
+    list-style-type: none;
+    border-bottom: 1px solid #aaa;
+    padding: 0 10px;
+}
+
+.dropdown-list li:last-child {
+    border-bottom: 0;
+}
+
+.dropdown-list li a {
+    font: normal 12px/26px arial;
+    color: #000;
+    text-decoration: none;
 }

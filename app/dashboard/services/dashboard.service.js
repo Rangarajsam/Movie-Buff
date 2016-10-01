@@ -1,4 +1,4 @@
-dashboardModule.service("dashboardService", ['$http', '$q', function ($http, $q) {
+dashboardModule.service("dashboardService", ['$http', '$q','$routeParams', function ($http, $q, $routeParams) {
 
     this.dashboard = "Dashboard";
     var API_KEY = "a01bef691df88befc1d2c4224ad12d93";
@@ -14,6 +14,17 @@ dashboardModule.service("dashboardService", ['$http', '$q', function ($http, $q)
             }, function (error) {
                 deferred.reject(error);
             });
+        return deferred.promise;
+    };
+    this.getSearchMovies = function (searchTxt) {
+        var deferred = $q.defer();
+        $http.get("http://api.themoviedb.org/3/search/movie?api_key=" + API_KEY + "&query=" + searchTxt)
+            .then(function (res) {
+                    deferred.resolve(res);
+                },
+                function (err) {
+                    deferred.reject(err);
+                });
         return deferred.promise;
     };
 }]);

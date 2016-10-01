@@ -34,6 +34,10 @@ movieBuff.config(["$routeProvider",function($routeProvider){
         templateUrl:"./details/views/details.html",
         controller:"DetailsController"
     })
+    .when("/movies/:movieName",{
+        templateUrl:"./common/views/search-result.html",
+        controller:"CommonController"
+    })
     .otherwise({
         redirectTo:"/login"
     })
